@@ -22,6 +22,11 @@ for(let ind in ransom){
         canBeUsed = false;
         break;
     }
+    else {
+        magazineHash[ransom[ind]]--;
+        if(magazineHash[ransom[ind]] === 0)
+            delete magazineHash[ransom[ind]]
+    }
 }
 
 if(canBeUsed)
